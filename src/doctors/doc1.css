@@ -1,0 +1,56 @@
+#docCard {
+    width: 56vw;
+    height: 47.4vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#docImage {
+    background-image: url("../images/doc1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 22vw;
+    height: 100%;
+    border-radius: 4px;
+}
+#docDesc {
+    width: 58%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.83vw;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+
+    color: #2F2F2F;
+}
+#docDesc h1 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 46px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+
+#buttonShell {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+#buttonShell button {
+    width:14.16vw;
+    height: 5.18vh;
+    background-color: #10BFAE;
+    border:none;
+    color:white;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0.0015em;
+    margin-top: 3vh;
+}
