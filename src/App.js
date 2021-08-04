@@ -49,6 +49,7 @@ function App (){
         </section>
         <section id="oper">
           <div id="upperOp">
+
             <div id="services">
               <h2>Услуги</h2>
               <div id="upperOpDesc">Врачи в абдоминальном отделении нашего центра успешно проводят лечение в виде:</div>
@@ -66,8 +67,12 @@ function App (){
               <div class="serviseDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
             </div>
 
-          </div>
-          <div id="downOp">
+            <div class="operBlock">
+              <div class="settings"></div>
+              <h4>Колоноскопия</h4>
+              <div class="serviseDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
+            </div>
+
             <div class="operBlock">
               <div class="settings"></div>
               <h4>Колоноскопия</h4>
@@ -91,10 +96,21 @@ function App (){
               <h4>Колоноскопия</h4>
               <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
             </div>
-            
+
           </div>
+          
+            
+            
+          
         </section>
         <section id="reviews">
+        <div id="reviewLeft">
+                <div id="reviewLeftInner">
+                    <h2>Отзывы</h2>
+                    <div id="reviewLeftDesc">Врачи в абдоминальном отделении нашего центра успешно проводят лечение в виде:</div>
+                    <button id="leaveReview">Оставить отзыв</button>
+                </div>
+          </div>
           <Carousel>
               <Carousel.Item> <Review1/> </Carousel.Item>
               <Carousel.Item> <Review1/> </Carousel.Item>

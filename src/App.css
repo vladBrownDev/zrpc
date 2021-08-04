@@ -129,6 +129,9 @@ section {
   margin-right: auto;
   margin-bottom:  27.4vh;
 }
+#reviews .carousel {
+  max-width: 45.8vw;
+}
 .carousel-indicators [data-bs-target]{
   display: none;
 }
@@ -141,6 +144,7 @@ a.carousel-control-prev,a.carousel-control-next  {
 a.carousel-control-prev {
   left: 30.5%;
   top: 81.3%;
+  transition: all ease-in 0.15s;
 }
 
 a.carousel-control-next {
@@ -174,19 +178,19 @@ a.carousel-control-prev:hover {
   margin-bottom: 24.4vh;
 }
 #upperOp {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom:0.83vw
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 19.16vw 19.16vw;
+  row-gap: 16px;
 
 }
 
 #upperOp .operBlock {
   margin-left: 0.83vw;
 }
-#services {
+/* #services {
   width: 38.83vw;
-}
+} */
 #services h2 {
   font-style: normal;
   font-weight: normal;
@@ -205,7 +209,7 @@ a.carousel-control-prev:hover {
 }
 .operBlock {
   width: 19.16vw;
-  height: 34.07vh;
+  height: 19.16vw;
   background-color: white;
   border-radius: 4px;
   display: flex;
@@ -244,6 +248,9 @@ a.carousel-control-prev:hover {
 
 #reviews {
   margin-bottom: 25vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 #map {
   margin:0;

@@ -1,16 +1,16 @@
 #firstReview {
     height: 48vh;
-    width: 77.5vw;
+    width: 45.8vw;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 #reviewLeft {
     width: 41%;
-    height: 100%;
+    height: 25.4vw;
 }
 #reviewRight {
-    width: 59%;
+    width: 100%;
     height: 100%;
     background-color: white;
     padding-top: 3.33vw;
@@ -18,7 +18,7 @@
     padding-bottom: 3.54vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
 }
 #reviewLeftInner {
@@ -74,7 +74,7 @@
     background-image: url("../images/patient.png");
     background-size: cover;
     position: absolute;
-    right: 49%;
+    right: 81%;
     top: 8%;
     
 }
@@ -88,6 +88,7 @@
 }
 #reviewText {
     max-width:70%;
+    margin-top: 2vw;
 }
 #reviewText p {
     font-style: normal;
@@ -99,9 +100,11 @@
     color: #2F2F2F;
 }
 #reviews .carousel .carousel-control-prev {
-    left: 33%;
+    left: 40%;
+    top: 39vh;
     background-color: white;
 }
 #reviews .carousel .carousel-control-next {
-    right: 53.5%;
+    right: 40%;
+    top: 39vh;
 }
