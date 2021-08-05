@@ -2,7 +2,7 @@ import './App.css';
 import React, {Component} from "react"
 import Carousel from "react-bootstrap/Carousel"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Doc1 from "./doctors/doc1"
+import Doc from "./doctors/doc"
 import Review1 from './reviews/review1';
 import language from "./languages"
 import {Link} from 'react-scroll'
@@ -12,7 +12,6 @@ import {Link} from 'react-scroll'
 
   let langObj = language()
 
-  console.log(langObj)
 
 
 class App extends Component {
@@ -86,8 +85,15 @@ class App extends Component {
           <h1 id="docHead">{this.state.currentLang.doctors.h1}</h1>
           <section id="carousel" name="carousel">
             <Carousel>
-              <Carousel.Item> <Doc1/> </Carousel.Item>
-              <Carousel.Item> <Doc1/> </Carousel.Item>
+              <Carousel.Item>
+                 <Doc
+                 data={this.state.currentLang.doctors.docList.first}
+                  /> 
+              </Carousel.Item>
+
+              <Carousel.Item>
+                 <Doc data={this.state.currentLang.doctors.docList.first}/>
+              </Carousel.Item>
             </Carousel>
             
           </section>
@@ -173,7 +179,7 @@ class App extends Component {
             
           </section>
           <section id="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10724.375128843645!2d35.204467!3d47.7796295!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9dbe02740ea7d681!2z0JfQsNC_0L7RgNGW0LfRjNC60LjQuSDRgNC10LPRltC-0L3QsNC70YzQvdC40Lkg0L_RgNC-0YLQuNC_0YPRhdC70LjQvdC90LjQuSDRhtC10L3RgtGAIHwgItCX0KDQn9CmIg!5e0!3m2!1sru!2sua!4v1627998189522!5m2!1sru!2sua" width="100%"  height="100%" allowfullscreen="" loading="lazy"></iframe>
+            <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10724.375128843645!2d35.204467!3d47.7796295!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9dbe02740ea7d681!2z0JfQsNC_0L7RgNGW0LfRjNC60LjQuSDRgNC10LPRltC-0L3QsNC70YzQvdC40Lkg0L_RgNC-0YLQuNC_0YPRhdC70LjQvdC90LjQuSDRhtC10L3RgtGAIHwgItCX0KDQn9CmIg!5e0!3m2!1sru!2sua!4v1627998189522!5m2!1sru!2sua" width="100%"  height="100%" allowFullScreen="" loading="lazy"></iframe>
           </section>
           <footer>
               <div id="footerLeft">
