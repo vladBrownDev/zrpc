@@ -1,160 +1,217 @@
 import './App.css';
-import React from "react"
+import React, {Component} from "react"
 import Carousel from "react-bootstrap/Carousel"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Doc1 from "./doctors/doc1"
 import Review1 from './reviews/review1';
+import language from "./languages"
 // import emailjs from "emailjs-com"
 
 
+  let langObj = language()
+
+  console.log(langObj)
 
 
+class App extends Component {
 
-function App (){
-  return (
-    <>
-      <div id="upperBlock">
+  constructor (props) {
+    super(props)
+    const {ukr,rus} = langObj
+    this.state = {
+      currentLang : ukr
+    }
+    this.setRus = () => {
+      
+      const ruEl = document.querySelector("#ru")
+      const ukrEl = document.querySelector("#ukr")
+      ruEl.className = "activeLang"
+      ukrEl.className = "lang"
+      this.setState(() => {return ( {currentLang : rus})})
+    }
+    this.setUkr = () => {
+      const ruEl = document.querySelector("#ru")
+      const ukrEl = document.querySelector("#ukr")
+      ruEl.className = "lang"
+      ukrEl.className = "activeLang"
+      this.setState(() => {return ( {currentLang : ukr})})
+    }
+  }
 
-        <header>
-
-          <div id="headerName">ЗРПЦ</div>
-          <div id="nav">
-
-            <span>Главная</span>
-            <span>Врачи</span>
-            <span>Услуги</span>
-            <span>Отзывы</span>
-            <span>Контакты</span>
-
+  render () {
+    return (
+      <>
+        <div id="upperBlock">
+  
+          <header>
+  
+            <div id="headerName">ЗРПЦ</div>
+            <div id="nav">
+  
+              <span>{this.state.currentLang.header.fBut}</span>
+              <span>{this.state.currentLang.header.secBut}</span>
+              <span>{this.state.currentLang.header.thirdBut}</span>
+              <span>{this.state.currentLang.header.fourthBut}</span>
+              <span>{this.state.currentLang.header.fifthBut}</span>
+              <div id="langSelect">
+                <span id="ru" class="lang" onClick={this.setRus}>RU</span>
+                <span id="ukr" class="activeLang" onClick={this.setUkr}>UKR</span>
+              </div>
+  
+            </div>
+  
+          </header>
+  
+          <div id="mainUpper">
+  
+            <h1>{this.state.currentLang.main.h1}</h1>
+            <div id="descr">
+              <Carousel controls={false} interval={2500}>
+                <Carousel.Item>{this.state.currentLang.main.fact1}</Carousel.Item>
+                <Carousel.Item>{this.state.currentLang.main.fact2}</Carousel.Item>
+                <Carousel.Item>{this.state.currentLang.main.fact3}</Carousel.Item>
+                <Carousel.Item>{this.state.currentLang.main.fact4}</Carousel.Item>
+                <Carousel.Item>{this.state.currentLang.main.fact5}</Carousel.Item>
+              </Carousel>
+            </div>
+            <button>{this.state.currentLang.main.but}</button>
+  
           </div>
-
-        </header>
-
-        <div id="mainUpper">
-
-          <h1>Абдоминальное хирургическое отделение </h1>
-          <div id="descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</div>
-          <button>Свяжитесь с нами</button>
-
+          
         </div>
-        
-      </div>
-      <main>
-        <section id="carousel">
-          <Carousel>
-            <Carousel.Item> <Doc1/> </Carousel.Item>
-            <Carousel.Item> <Doc1/> </Carousel.Item>
-          </Carousel>
-          
-        </section>
-        <section id="oper">
-          <div id="upperOp">
-
-            <div id="services">
-              <h2>Услуги</h2>
-              <div id="upperOpDesc">Врачи в абдоминальном отделении нашего центра успешно проводят лечение в виде:</div>
-            </div>
-
-            <div class="operBlock">
-              <div class="settings"></div>
-              <h4>Колоноскопия</h4>
-              <div class="serviseDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
-            </div>
-
-            <div class="operBlock">
-              <div class="settings"></div>
-              <h4>Колоноскопия</h4>
-              <div class="serviseDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
-            </div>
-
-            <div class="operBlock">
-              <div class="settings"></div>
-              <h4>Колоноскопия</h4>
-              <div class="serviseDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
-            </div>
-
-            <div class="operBlock">
-              <div class="settings"></div>
-              <h4>Колоноскопия</h4>
-              <div class="serviseDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
-            </div>
-
-            <div class="operBlock">
-              <div class="settings"></div>
-              <h4>Колоноскопия</h4>
-              <div class="serviseDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
-            </div>
-
-            <div class="operBlock">
-              <div class="settings"></div>
-              <h4>Колоноскопия</h4>
-              <div class="serviseDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
-            </div>
-
-            <div class="operBlock">
-              <div class="settings"></div>
-              <h4>Колоноскопия</h4>
-              <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</div>
-            </div>
-
-          </div>
-          
+        <main>
+          <h1 id="docHead">{this.state.currentLang.doctors.h1}</h1>
+          <section id="carousel">
+            <Carousel>
+              <Carousel.Item> <Doc1/> </Carousel.Item>
+              <Carousel.Item> <Doc1/> </Carousel.Item>
+            </Carousel>
             
-            
-          
-        </section>
-        <section id="reviews">
-        <div id="reviewLeft">
-                <div id="reviewLeftInner">
-                    <h2>Отзывы</h2>
-                    <div id="reviewLeftDesc">Врачи в абдоминальном отделении нашего центра успешно проводят лечение в виде:</div>
-                    <button id="leaveReview">Оставить отзыв</button>
-                </div>
-          </div>
-          <Carousel>
-              <Carousel.Item> <Review1/> </Carousel.Item>
-              <Carousel.Item> <Review1/> </Carousel.Item>
-          </Carousel>
-        </section>
-        <section id="map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10724.375128843645!2d35.204467!3d47.7796295!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9dbe02740ea7d681!2z0JfQsNC_0L7RgNGW0LfRjNC60LjQuSDRgNC10LPRltC-0L3QsNC70YzQvdC40Lkg0L_RgNC-0YLQuNC_0YPRhdC70LjQvdC90LjQuSDRhtC10L3RgtGAIHwgItCX0KDQn9CmIg!5e0!3m2!1sru!2sua!4v1627998189522!5m2!1sru!2sua" width="100%"  height="100%" allowfullscreen="" loading="lazy"></iframe>
-        </section>
-        <footer>
-            <div id="footerLeft">
-              <div>
-                <div class="footerH">
-                  Телефон:
-                </div>
-                <div id="number">
-                  +380 (68) 958-67-86
-                </div>
+          </section>
+          <section id="oper">
+            <div id="upperOp">
+  
+              <div id="services">
+                <h2>{this.state.currentLang.servises.h1}</h2>
+                <div id="upperOpDesc">{this.state.currentLang.servises.desc}</div>
               </div>
+  
+              <div class="operBlock">
+                <div class="settings"></div>
+                <div id="operText">
+                  <h4>{this.state.currentLang.servises.serv1}</h4>
+                  <div class="serviseDesc">{this.state.currentLang.servises.serv1Desk}</div>
+                </div>
+                
+              </div>
+  
+              <div class="operBlock">
+                <div class="settings"></div>
+                <div id="operText">
+                  <h4>{this.state.currentLang.servises.serv2}</h4>
+                  <div class="serviseDesc">{this.state.currentLang.servises.serv2Desk}</div>
+                </div>
+                
+              </div>
+  
+              <div class="operBlock">
+                <div class="settings"></div>
+                <div id="operText">
+                  <h4>{this.state.currentLang.servises.serv3}</h4>
+                  <div class="serviseDesc">{this.state.currentLang.servises.serv3Desk}</div>
+                </div>
+                
+              </div>
+  
+              <div class="operBlock">
+                <div class="settings"></div>
+                <div id="operText">
+                  <h4>{this.state.currentLang.servises.serv4}</h4>
+                  <div class="serviseDesc">{this.state.currentLang.servises.serv4Desk}</div>
+                </div>
+                
+              </div>
+  
+              <div class="operBlock">
+                <div class="settings"></div>
+                <div id="operText">
+                  <h4>{this.state.currentLang.servises.serv5}</h4>
+                  <div class="serviseDesc">{this.state.currentLang.servises.serv5Desk}</div>
+                </div>
+                
+              </div>
+  
+              <div class="operBlock">
+                <div class="settings"></div>
+                <div id="operText">
+                  <h4>{this.state.currentLang.servises.serv6}</h4>
+                  <div class="serviseDesc">{this.state.currentLang.servises.serv6Desk}</div>
+                </div>
+                
+              </div>
+  
+              <div class="operBlock">
+                <div class="settings"></div>
+                <h4>{this.state.currentLang.servises.serv6}</h4>
+                <div>{this.state.currentLang.servises.serv6Desk}</div>
+              </div>
+  
+            </div>
+            
               
+              
+            
+          </section>
+          <h1 id="docHead">{this.state.currentLang.reviews.h1}</h1>
+          <section id="reviews">
+          
+            <div id="reviewGrid">
+              <Review1/> <Review1/> <Review1/>
             </div>
-
-            <div id="footerRight">
-              <div id="mail">
-                <div class="footerH">
-                    Почта:
+                
+            
+          </section>
+          <section id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10724.375128843645!2d35.204467!3d47.7796295!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9dbe02740ea7d681!2z0JfQsNC_0L7RgNGW0LfRjNC60LjQuSDRgNC10LPRltC-0L3QsNC70YzQvdC40Lkg0L_RgNC-0YLQuNC_0YPRhdC70LjQvdC90LjQuSDRhtC10L3RgtGAIHwgItCX0KDQn9CmIg!5e0!3m2!1sru!2sua!4v1627998189522!5m2!1sru!2sua" width="100%"  height="100%" allowfullscreen="" loading="lazy"></iframe>
+          </section>
+          <footer>
+              <div id="footerLeft">
+                <div>
+                  <div class="footerH">
+                    Телефон:
+                  </div>
+                  <div id="number">
+                    +380 (68) 958-67-86
+                  </div>
                 </div>
-                <div class="footerText">
-                    mail@gmail.com
+                
+              </div>
+  
+              <div id="footerRight">
+                <div id="mail">
+                  <div class="footerH">
+                    {this.state.currentLang.footer.mail}
+                  </div>
+                  <div class="footerText">
+                      mail@gmail.com
+                  </div>
+                </div>
+  
+                <div id="adress">
+                  <div class="footerH">
+                    {this.state.currentLang.footer.adress}
+                  </div>
+                  <div class="footerText">
+                    {this.state.currentLang.footer.adressDesk}
+                  </div>    
                 </div>
               </div>
-
-              <div id="adress">
-                <div class="footerH">
-                    Адрес:
-                </div>
-                <div class="footerText">
-                  вул. Культурна, 177А, Запоріжжя, Запорізька область
-                </div>    
-              </div>
-            </div>
-        </footer>
-      </main>
-    </>
-  );
+          </footer>
+        </main>
+      </>
+    );
+  }
+  
 
 }
   

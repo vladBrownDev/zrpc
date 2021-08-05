@@ -65,9 +65,32 @@ header {
   letter-spacing: 0.0015em;
   color: #FFFFFF;
   margin-left: 2vw;
+  cursor: pointer;
 }
+
+#langSelect {
+  display: flex;
+  flex-direction: row;
+
+}
+#langSelect #ukr {
+  margin: 0;
+  padding-left: 7px;
+  border-left: 2px solid white ;
+}
+#langSelect #ru {
+  padding-right: 7px;
+}
+
+#langSelect .activeLang {
+  color: #10BFAE;
+}
+#langSelect .lang {
+  color: white;
+}
+
 #mainUpper {
-  margin-top:20.5vh;
+  margin-top:35vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -76,12 +99,12 @@ header {
 #mainUpper h1 {
   font-style: normal;
   font-weight: 300;
-  font-size: 3vw;
+  font-size: 2.7vw;
   line-height: 80px;
   display: flex;
   align-items: center;
   letter-spacing: -0.005em;
-  width:50%;
+  width:80%;
   color: #FFFFFF;
 }
 #descr {
@@ -92,6 +115,10 @@ header {
   line-height: 33px;
   color: #FFFFFF;
   width:70%;
+  max-width: 792px;
+}
+#descr .carousel .carousel-inner .carousel-item {
+  height: 110px;
 }
 
 #mainUpper button {
@@ -114,13 +141,27 @@ header {
 }
 
 main {
-  padding-top: 19.2vh;
+  padding-top: 18vh;
   background: #E5E5E5;
 }
 
 section {
   margin-left: 10.4vw;
   margin-right: 10.4vw;
+}
+
+#docHead {
+  margin-left: 50%;
+  display: inline-block;
+  margin-bottom: 4vh;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.5vw;
+  line-height: 65px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
 }
 
 #carousel {
@@ -135,41 +176,30 @@ section {
 .carousel-indicators [data-bs-target]{
   display: none;
 }
-a.carousel-control-prev,a.carousel-control-next  {
-  height: 8.9vh;
-  width: 5vw;
-  opacity: 1;
-  border-radius: 4px;
-}
+
 a.carousel-control-prev {
-  left: 30.5%;
-  top: 81.3%;
-  transition: all ease-in 0.15s;
-}
+  left: -15%;
+
+} 
 
 a.carousel-control-next {
-  right: 49.3%;
-  top: 81.3%;
-  background-color: white;
+  left: 100%;
+
 }
 span.carousel-control-next-icon {
-    background-image: url("./images/arrow.svg");
-    background-size: 50%;
+    background-image: url("./images/smallArrow.png");
+    background-size: 30%;
     height: 100%;
     width: 100%; 
 }
 span.carousel-control-prev-icon {
-  background-image: url("./images/arrow.svg");
-  background-size: 50%;
+  background-image: url("./images/smallArrow.png");
+  background-size: 30%;
   height: 100%;
   width: 100%; 
   transform: rotate(180deg);
 }
 
-a.carousel-control-prev:hover {
-  background-color: white;
-  transition: all ease-in 0.15s;
-}
 #oper {
   display: flex;
   flex-direction: column;
@@ -203,8 +233,8 @@ a.carousel-control-prev:hover {
 #upperOpDesc {
   max-width: 520px;
   font-weight: normal;
-  font-size: 20px;
-  line-height: 27px;
+  font-size: 17px;
+  line-height: 1.5vw;
   letter-spacing: 0.0015em;
 }
 .operBlock {
@@ -219,6 +249,9 @@ a.carousel-control-prev:hover {
   padding-bottom: 1.9vh;
   font-style: normal;
 
+}
+#operText {
+  min-height: 25%;
 }
 .operBlock div {
   font-style: normal;
@@ -251,6 +284,13 @@ a.carousel-control-prev:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+#reviewGrid {
+  width:100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 24vw;
+  grid-column-gap: 1.2vw;
 }
 #map {
   margin:0;

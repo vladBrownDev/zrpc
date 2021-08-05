@@ -6,14 +6,18 @@ export default function Review1 () {
         <div id="firstReview">
             <div id="reviewRight">
                 <div id="patientCard">
-                    <div id="patientName">
-                        Имя Фамилия
-                    </div>
+                    <div id="patientPic"></div>
+                    <div>
+                        <div id="patientName">
+                            Имя Фамилия
+                        </div>
 
-                    <div id="downPatient">
-                        <span>Пациент</span>
-                        <span>21.01.2021</span>
-                    </div> 
+                        <div id="downPatient">
+                            <span>Пациент</span>
+                            <span>21.01.2021</span>
+                        </div> 
+                    </div>
+                    
                 </div>
                 <div id="reviewText">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
