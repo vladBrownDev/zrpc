@@ -67,6 +67,9 @@ header {
   margin-left: 2vw;
   cursor: pointer;
 }
+#nav #fBut{
+  color: #10BFAE;
+}
 
 #langSelect {
   display: flex;
@@ -209,7 +212,7 @@ span.carousel-control-prev-icon {
 }
 #upperOp {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 19.16vw 19.16vw;
   row-gap: 16px;
 
@@ -217,6 +220,17 @@ span.carousel-control-prev-icon {
 
 #upperOp .operBlock {
   margin-left: 0.83vw;
+}
+#downLfetBlock {
+  display: flex;
+  flex-direction: row;
+}
+
+#services {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-top: 10px;
 }
 /* #services {
   width: 38.83vw;
@@ -228,6 +242,7 @@ span.carousel-control-prev-icon {
   line-height: 65px;
   display: flex;
   align-items: center;
+  margin-bottom: 2.22vh;
 }
 
 #upperOpDesc {

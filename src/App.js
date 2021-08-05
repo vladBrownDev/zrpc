@@ -48,7 +48,7 @@ class App extends Component {
             <div id="headerName">ЗРПЦ</div>
             <div id="nav">
   
-              <span>{this.state.currentLang.header.fBut}</span>
+              <span id="fBut">{this.state.currentLang.header.fBut}</span>
               <span>{this.state.currentLang.header.secBut}</span>
               <span>{this.state.currentLang.header.thirdBut}</span>
               <span>{this.state.currentLang.header.fourthBut}</span>
@@ -113,22 +113,24 @@ class App extends Component {
                 </div>
                 
               </div>
-  
-              <div class="operBlock">
-                <div class="settings"></div>
-                <div id="operText">
-                  <h4>{this.state.currentLang.servises.serv3}</h4>
-                  <div class="serviseDesc">{this.state.currentLang.servises.serv3Desk}</div>
+              <div id="downLfetBlock">
+                <div class="operBlock">
+                  <div class="settings"></div>
+                  <div id="operText">
+                    <h4>{this.state.currentLang.servises.serv3}</h4>
+                    <div class="serviseDesc">{this.state.currentLang.servises.serv3Desk}</div>
+                  </div>
+                  
                 </div>
-                
+    
+                <div class="operBlock">
+                  <div class="settings"></div>
+                  <div id="operText">
+                    <h4>{this.state.currentLang.servises.serv4}</h4>
+                    <div class="serviseDesc">{this.state.currentLang.servises.serv4Desk}</div>
+                  </div>
               </div>
-  
-              <div class="operBlock">
-                <div class="settings"></div>
-                <div id="operText">
-                  <h4>{this.state.currentLang.servises.serv4}</h4>
-                  <div class="serviseDesc">{this.state.currentLang.servises.serv4Desk}</div>
-                </div>
+              
                 
               </div>
   
@@ -150,11 +152,7 @@ class App extends Component {
                 
               </div>
   
-              <div class="operBlock">
-                <div class="settings"></div>
-                <h4>{this.state.currentLang.servises.serv6}</h4>
-                <div>{this.state.currentLang.servises.serv6Desk}</div>
-              </div>
+              
   
             </div>
             
