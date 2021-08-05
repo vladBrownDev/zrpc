@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Doc1 from "./doctors/doc1"
 import Review1 from './reviews/review1';
 import language from "./languages"
+import {Link} from 'react-scroll'
+
 // import emailjs from "emailjs-com"
 
 
@@ -36,6 +38,7 @@ class App extends Component {
       ukrEl.className = "activeLang"
       this.setState(() => {return ( {currentLang : ukr})})
     }
+
   }
 
   render () {
@@ -49,10 +52,10 @@ class App extends Component {
             <div id="nav">
   
               <span id="fBut">{this.state.currentLang.header.fBut}</span>
-              <span>{this.state.currentLang.header.secBut}</span>
-              <span>{this.state.currentLang.header.thirdBut}</span>
-              <span>{this.state.currentLang.header.fourthBut}</span>
-              <span>{this.state.currentLang.header.fifthBut}</span>
+              <span><Link activeClass="active"  to="docHead" duration={300} offset={-200} spy={true} smooth={true}>{this.state.currentLang.header.secBut}</Link></span>
+              <span><Link  to="services" duration={300} offset={-100}  smooth={true}>{this.state.currentLang.header.thirdBut}</Link></span>
+              <span><Link  to="reviewHead" duration={300} offset={-200} spy={true} smooth={true}>{this.state.currentLang.header.fourthBut}</Link></span>
+              <span><Link  to="mail" duration={300} offset={-200} spy={true} smooth={true}>{this.state.currentLang.header.fifthBut}</Link></span>
               <div id="langSelect">
                 <span id="ru" class="lang" onClick={this.setRus}>RU</span>
                 <span id="ukr" class="activeLang" onClick={this.setUkr}>UKR</span>
@@ -81,7 +84,7 @@ class App extends Component {
         </div>
         <main>
           <h1 id="docHead">{this.state.currentLang.doctors.h1}</h1>
-          <section id="carousel">
+          <section id="carousel" name="carousel">
             <Carousel>
               <Carousel.Item> <Doc1/> </Carousel.Item>
               <Carousel.Item> <Doc1/> </Carousel.Item>
@@ -160,7 +163,7 @@ class App extends Component {
               
             
           </section>
-          <h1 id="docHead">{this.state.currentLang.reviews.h1}</h1>
+          <h1 id="reviewHead">{this.state.currentLang.reviews.h1}</h1>
           <section id="reviews">
           
             <div id="reviewGrid">

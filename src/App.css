@@ -154,7 +154,7 @@ section {
 }
 
 #docHead {
-  margin-left: 50%;
+  margin-left: 45%;
   display: inline-block;
   margin-bottom: 4vh;
   font-style: normal;
@@ -300,6 +300,19 @@ span.carousel-control-prev-icon {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+#reviewHead {
+  margin-left: 45%;
+  display: inline-block;
+  margin-bottom: 4vh;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.5vw;
+  line-height: 65px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
 }
 #reviewGrid {
   width:100%;
