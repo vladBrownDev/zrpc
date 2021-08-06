@@ -10,9 +10,7 @@ import {Link} from 'react-scroll'
 // import emailjs from "emailjs-com"
 
 
-  let langObj = language()
-
-
+let langObj = language()
 
 class App extends Component {
 
@@ -65,19 +63,13 @@ class App extends Component {
           </header>
   
           <div id="mainUpper">
-  
             <h1>{this.state.currentLang.main.h1}</h1>
             <div id="descr">
               <Carousel controls={false} interval={2500}>
-                <Carousel.Item>{this.state.currentLang.main.fact1}</Carousel.Item>
-                <Carousel.Item>{this.state.currentLang.main.fact2}</Carousel.Item>
-                <Carousel.Item>{this.state.currentLang.main.fact3}</Carousel.Item>
-                <Carousel.Item>{this.state.currentLang.main.fact4}</Carousel.Item>
-                <Carousel.Item>{this.state.currentLang.main.fact5}</Carousel.Item>
+                {this.state.currentLang.main.facts.map(fact => <Carousel.Item>{fact}</Carousel.Item>)}
               </Carousel>
             </div>
             <button>{this.state.currentLang.main.but}</button>
-  
           </div>
           
         </div>
@@ -86,13 +78,10 @@ class App extends Component {
           <section id="carousel" name="carousel">
             <Carousel>
               <Carousel.Item>
-                 <Doc
-                 data={this.state.currentLang.doctors.docList.first}
-                  /> 
+                 <Doc data={this.state.currentLang.doctors.docList.zghurskyi}/> 
               </Carousel.Item>
-
               <Carousel.Item>
-                 <Doc data={this.state.currentLang.doctors.docList.first}/>
+                 <Doc data={this.state.currentLang.doctors.docList.sidorenko}/>
               </Carousel.Item>
             </Carousel>
             
@@ -218,9 +207,6 @@ class App extends Component {
       </>
     );
   }
-  
-
 }
   
-
 export default App;
