@@ -65,7 +65,8 @@ const lang = {
             serv7Desk:"",
         },
         reviews : {
-            h1:"Відгуки"
+            h1:"Відгуки",
+            read: "Читати всі відгуки:"
         },
         footer : {
             phone:"Телефон:",
@@ -139,7 +140,8 @@ const lang = {
             serv7Desk:"",
         },
         reviews : {
-            h1:"Отзывы"
+            h1:"Отзывы",
+            read: "Читать все отзывы:"
         },
         footer : {
             mail:"Почта:",

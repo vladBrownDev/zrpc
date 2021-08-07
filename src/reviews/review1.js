@@ -7,7 +7,7 @@ export default function Review1 () {
             <div id="reviewRight">
                 <div id="patientCard">
                     <div id="patientPic"></div>
-                    <div>
+                    <div id="rewNameShell">
                         <div id="patientName">
                             Имя Фамилия
                         </div>

@@ -27,11 +27,15 @@
     background-size: cover;
     margin-right: 1.2vw;
 }
+#rewNameShell {
+    height: 5.8vw;
+}
+
 
 #patientName {
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 1.25vw;
     line-height: 33px;
 
 }
@@ -46,7 +50,7 @@
 #downPatient span {
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 1.05vw;
     line-height: 27px;
     letter-spacing: 0.0015em;
     margin-right: 16px;

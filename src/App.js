@@ -2,12 +2,18 @@ import './App.css';
 import React, {Component} from "react"
 import Carousel from "react-bootstrap/Carousel"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Link} from 'react-scroll'
+
+//components
+
 import Doc from "./doctors/doc"
 import Review1 from './reviews/review1';
 import language from "./languages"
-import {Link} from 'react-scroll'
 
-// import emailjs from "emailjs-com"
+//images
+
+import reviewImg from "./images/reviews.png"
+
 
 
 let langObj = language()
@@ -165,8 +171,17 @@ class App extends Component {
               <Review1/> <Review1/> <Review1/>
             </div>
                 
+            <div id="readReviews">
+              <div>{this.state.currentLang.reviews.read}</div>
+              <a  target="_blank" rel="noreferrer" href="https://www.google.com/search?q=%D0%B7%D1%80%D0%BF%D1%86&oq=%D0%B7%D1%80%D0%BF%D1%86&aqs=chrome..69i57j46i39i175i199j0i1i10j0i1l2j69i60l3.1198j0j7&sourceid=chrome&ie=UTF-8#lrd=0x40dc5ee6088d346f:0x9dbe02740ea7d681,1,,,"              >
+                <img alt="Читать все отзывы"
+                src={reviewImg}/>
+              </a>
+              
+            </div>
             
           </section>
+          
           <section id="map">
             <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10724.375128843645!2d35.204467!3d47.7796295!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9dbe02740ea7d681!2z0JfQsNC_0L7RgNGW0LfRjNC60LjQuSDRgNC10LPRltC-0L3QsNC70YzQvdC40Lkg0L_RgNC-0YLQuNC_0YPRhdC70LjQvdC90LjQuSDRhtC10L3RgtGAIHwgItCX0KDQn9CmIg!5e0!3m2!1sru!2sua!4v1627998189522!5m2!1sru!2sua" width="100%"  height="100%" allowFullScreen="" loading="lazy"></iframe>
           </section>
