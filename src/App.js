@@ -83,6 +83,9 @@ class App extends Component {
               <Carousel.Item>
                  <Doc data={this.state.currentLang.doctors.docList.sidorenko}/>
               </Carousel.Item>
+              <Carousel.Item>
+                 <Doc data={this.state.currentLang.doctors.docList.solomka}/>
+              </Carousel.Item>
             </Carousel>
             
           </section>
