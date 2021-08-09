@@ -535,6 +535,7 @@ footer {
     display: none;
   }
   #operMobile {
+    display: grid;
     margin-left: 5vw;
     margin-right: 5vw;
     margin-top: 32px;
@@ -561,6 +562,7 @@ footer {
     letter-spacing: 0.0015em;
     color: #000000;
   }
+
   #operMobile button::after {
     position: absolute;
     left: 90%;
