@@ -1,6 +1,7 @@
 import './App.css';
 import React, {Component} from "react"
 import Carousel from "react-bootstrap/Carousel"
+import { Nav, Navbar, Accordion } from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link} from 'react-scroll'
 
@@ -9,6 +10,7 @@ import {Link} from 'react-scroll'
 import Doc from "./doctors/doc"
 import Review1 from './reviews/review1';
 import language from "./languages"
+import MobileDocs from './mobile-carousel';
 
 //images
 
@@ -41,7 +43,9 @@ class App extends Component {
       ukrEl.className = "activeLang"
       this.setState(() => {return ( {currentLang : ukr})})
     }
-
+    this.changeColor = (e) => {
+      e.target.style.backgroundColor="white"
+    }
   }
 
   render () {
@@ -51,21 +55,36 @@ class App extends Component {
   
           <header>
   
-            <div id="headerName">ЗРПЦ</div>
+            <div id="headerName"></div>
             <div id="nav">
   
               <span id="fBut">{this.state.currentLang.header.fBut}</span>
-              <span><Link activeClass="active"  to="docHead" duration={300} offset={-200} spy={true} smooth={true}>{this.state.currentLang.header.secBut}</Link></span>
-              <span><Link  to="services" duration={300} offset={-100}  smooth={true}>{this.state.currentLang.header.thirdBut}</Link></span>
-              <span><Link  to="reviewHead" duration={300} offset={-200} spy={true} smooth={true}>{this.state.currentLang.header.fourthBut}</Link></span>
-              <span><Link  to="mail" duration={300} offset={-200} spy={true} smooth={true}>{this.state.currentLang.header.fifthBut}</Link></span>
+              <span><Link activeClass="active"  to="docHead" duration={300} offset={-200} spy={true} >{this.state.currentLang.header.secBut}</Link></span>
+              <span><Link  to="services" duration={300} offset={-100}  >{this.state.currentLang.header.thirdBut}</Link></span>
+              <span><Link  to="reviewHead" duration={300} offset={-200} spy={true}>{this.state.currentLang.header.fourthBut}</Link></span>
+              <span><Link  to="mail" duration={300} offset={-200} spy={true} >{this.state.currentLang.header.fifthBut}</Link></span>
               <div id="langSelect">
                 <span id="ru" class="lang" onClick={this.setRus}>RU</span>
                 <span id="ukr" class="activeLang" onClick={this.setUkr}>UKR</span>
               </div>
   
             </div>
-  
+            <Navbar collapseOnSelect expand="lg" bg="black" variant="dark">
+              <Navbar.Brand href="#home">
+                <div id="logo"></div>
+              </Navbar.Brand>
+              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+              <Navbar.Collapse id="responsive-nav-dropdown">
+                <Nav className="mr-auto">
+                    <Link activeClass="active"  to="docHead" duration={300}  spy={true} >{this.state.currentLang.header.secBut}</Link>
+                    <Link activeClass="active"  to="servHead" duration={300}  spy={true} >{this.state.currentLang.header.thirdBut}</Link>
+                    <Link activeClass="active"  to="reviewHead" duration={300}  spy={true} >{this.state.currentLang.header.fourthBut}</Link>
+                    <Link activeClass="active"  to="number" duration={300}  spy={true} >{this.state.currentLang.header.fifthBut}</Link>
+                </Nav>
+                
+              </Navbar.Collapse>
+            </Navbar>
+
           </header>
   
           <div id="mainUpper">
@@ -95,6 +114,23 @@ class App extends Component {
             </Carousel>
             
           </section>
+          <section id="mobileCarousel">
+            <Carousel interval={null}>
+              <Carousel.Item>
+                <MobileDocs data={this.state.currentLang.doctors.docList.sidorenko}/>
+                
+              </Carousel.Item>
+
+              <Carousel.Item>
+                <MobileDocs data={this.state.currentLang.doctors.docList.sidorenko}/>
+              </Carousel.Item>
+
+              <Carousel.Item>
+                <MobileDocs data={this.state.currentLang.doctors.docList.sidorenko}/>
+              </Carousel.Item>
+            </Carousel>
+            <button id="docBut">{this.state.currentLang.doctors.docList.sidorenko.button}</button>
+          </section>  
           <section id="oper">
             <div id="upperOp">
   
@@ -167,6 +203,53 @@ class App extends Component {
               
             
           </section>
+          <section id="operMobile">
+            <div id="servHead">Наші послуги</div>
+          <Accordion defaultActiveKey="0">
+                <Accordion.Item eventKey="1">
+                    <Accordion.Header onClick={this.changeColor}><div class="buttonText">{this.state.currentLang.servises.serv1}</div></Accordion.Header>
+                    <Accordion.Body>
+                    <div class="buttonText">{this.state.currentLang.servises.serv1Desk}</div>
+                    </Accordion.Body>
+                </Accordion.Item>
+
+                <Accordion.Item eventKey="2">
+                    <Accordion.Header onClick={this.changeColor}><div class="buttonText">{this.state.currentLang.servises.serv2}</div></Accordion.Header>
+                    <Accordion.Body>
+                      <div class="buttonText">{this.state.currentLang.servises.serv2Desk}</div>
+                    </Accordion.Body>
+                </Accordion.Item>
+
+                <Accordion.Item eventKey="3">
+                    <Accordion.Header onClick={this.changeColor}><div class="buttonText">{this.state.currentLang.servises.serv3}</div></Accordion.Header>
+                    <Accordion.Body>
+                    <div class="buttonText">{this.state.currentLang.servises.serv3Desk}</div>
+                    </Accordion.Body>
+                </Accordion.Item>
+
+                <Accordion.Item eventKey="4">
+                    <Accordion.Header onClick={this.changeColor}><div class="buttonText">{this.state.currentLang.servises.serv4}</div></Accordion.Header>
+                    <Accordion.Body>
+                    <div class="buttonText">{this.state.currentLang.servises.serv4Desk}</div>
+                    </Accordion.Body>
+                </Accordion.Item>
+
+                <Accordion.Item eventKey="5">
+                    <Accordion.Header onClick={this.changeColor}><div class="buttonText">{this.state.currentLang.servises.serv5}</div></Accordion.Header>
+                    <Accordion.Body>
+                    <div class="buttonText">{this.state.currentLang.servises.serv5Desk}</div>
+                    </Accordion.Body>
+                </Accordion.Item>
+
+                <Accordion.Item eventKey="6">
+                    <Accordion.Header onClick={this.changeColor}><div class="buttonText">{this.state.currentLang.servises.serv6}</div></Accordion.Header>
+                    <Accordion.Body>
+                    <div class="buttonText">{this.state.currentLang.servises.serv6Desk}</div>
+                    </Accordion.Body>
+                </Accordion.Item>
+            </Accordion>
+            
+          </section>
           <h1 id="reviewHead">{this.state.currentLang.reviews.h1}</h1>
           <section id="reviews">
           
@@ -195,7 +278,7 @@ class App extends Component {
                     Телефон:
                   </div>
                   <div id="number">
-                    +380 (68) 958-67-86
+                    <a href="tel:+380689586786">+380 (68) 958-67-86</a>
                   </div>
                 </div>
                 
