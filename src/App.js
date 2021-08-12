@@ -15,6 +15,8 @@ import MobileDocs from './mobile-carousel';
 //images
 
 import reviewImg from "./images/reviews.png"
+import solomka from "./images/solomka.png"
+import sidorenko from "./images/sidorenko.png"
 
 
 
@@ -117,16 +119,16 @@ class App extends Component {
           <section id="mobileCarousel">
             <Carousel interval={null}>
               <Carousel.Item>
-                <MobileDocs data={this.state.currentLang.doctors.docList.sidorenko}/>
+                <MobileDocs img={solomka} data={this.state.currentLang.doctors.docList.sidorenko}/>
                 
               </Carousel.Item>
 
               <Carousel.Item>
-                <MobileDocs data={this.state.currentLang.doctors.docList.sidorenko}/>
+                <MobileDocs img={solomka} data={this.state.currentLang.doctors.docList.solomka}/>
               </Carousel.Item>
 
               <Carousel.Item>
-                <MobileDocs data={this.state.currentLang.doctors.docList.sidorenko}/>
+                <MobileDocs img={sidorenko} data={this.state.currentLang.doctors.docList.sidorenko}/>
               </Carousel.Item>
             </Carousel>
             <button id="docBut">{this.state.currentLang.doctors.docList.sidorenko.button}</button>
