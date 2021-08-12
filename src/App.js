@@ -14,7 +14,7 @@ import MobileDocs from './mobile-carousel';
 
 //images
 
-import reviewImg from "./images/reviews.png"
+import reviewImg from "./images/reviews2.png"
 import solomka from "./images/solomka.png"
 import sidorenko from "./images/sidorenko.png"
 
@@ -53,41 +53,42 @@ class App extends Component {
   render () {
     return (
       <>
+      <header>
+  
+  <div id="headerName"></div>
+  <div id="nav">
+
+    <span id="fBut">{this.state.currentLang.header.fBut}</span>
+    <span><Link activeClass="active"  to="docHead" duration={300} offset={-200} spy={true} >{this.state.currentLang.header.secBut}</Link></span>
+    <span><Link  to="services" duration={300} offset={-100}  >{this.state.currentLang.header.thirdBut}</Link></span>
+    <span><Link  to="reviewHead" duration={300} offset={-200} spy={true}>{this.state.currentLang.header.fourthBut}</Link></span>
+    <span><Link  to="mail" duration={300} offset={-200} spy={true} >{this.state.currentLang.header.fifthBut}</Link></span>
+    <div id="langSelect">
+      <span id="ru" class="lang" onClick={this.setRus}>RU</span>
+      <span id="ukr" class="activeLang" onClick={this.setUkr}>UKR</span>
+    </div>
+
+  </div>
+  <Navbar collapseOnSelect expand="lg" bg="black" variant="dark">
+    <Navbar.Brand href="#home">
+      <div id="logo"></div>
+    </Navbar.Brand>
+    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+    <Navbar.Collapse id="responsive-nav-dropdown">
+      <Nav className="mr-auto">
+          <Link activeClass="active"  to="docHead" duration={300}  spy={true} >{this.state.currentLang.header.secBut}</Link>
+          <Link activeClass="active"  to="servHead" duration={300}  spy={true} >{this.state.currentLang.header.thirdBut}</Link>
+          <Link activeClass="active"  to="reviewHead" duration={300}  spy={true} >{this.state.currentLang.header.fourthBut}</Link>
+          <Link activeClass="active"  to="number" duration={300}  spy={true} >{this.state.currentLang.header.fifthBut}</Link>
+      </Nav>
+      
+    </Navbar.Collapse>
+  </Navbar>
+
+</header>
         <div id="upperBlock">
   
-          <header>
-  
-            <div id="headerName"></div>
-            <div id="nav">
-  
-              <span id="fBut">{this.state.currentLang.header.fBut}</span>
-              <span><Link activeClass="active"  to="docHead" duration={300} offset={-200} spy={true} >{this.state.currentLang.header.secBut}</Link></span>
-              <span><Link  to="services" duration={300} offset={-100}  >{this.state.currentLang.header.thirdBut}</Link></span>
-              <span><Link  to="reviewHead" duration={300} offset={-200} spy={true}>{this.state.currentLang.header.fourthBut}</Link></span>
-              <span><Link  to="mail" duration={300} offset={-200} spy={true} >{this.state.currentLang.header.fifthBut}</Link></span>
-              <div id="langSelect">
-                <span id="ru" class="lang" onClick={this.setRus}>RU</span>
-                <span id="ukr" class="activeLang" onClick={this.setUkr}>UKR</span>
-              </div>
-  
-            </div>
-            <Navbar collapseOnSelect expand="lg" bg="black" variant="dark">
-              <Navbar.Brand href="#home">
-                <div id="logo"></div>
-              </Navbar.Brand>
-              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-              <Navbar.Collapse id="responsive-nav-dropdown">
-                <Nav className="mr-auto">
-                    <Link activeClass="active"  to="docHead" duration={300}  spy={true} >{this.state.currentLang.header.secBut}</Link>
-                    <Link activeClass="active"  to="servHead" duration={300}  spy={true} >{this.state.currentLang.header.thirdBut}</Link>
-                    <Link activeClass="active"  to="reviewHead" duration={300}  spy={true} >{this.state.currentLang.header.fourthBut}</Link>
-                    <Link activeClass="active"  to="number" duration={300}  spy={true} >{this.state.currentLang.header.fifthBut}</Link>
-                </Nav>
-                
-              </Navbar.Collapse>
-            </Navbar>
-
-          </header>
+          
   
           <div id="mainUpper">
             <h1>{this.state.currentLang.main.h1}</h1>
@@ -96,7 +97,7 @@ class App extends Component {
                 {this.state.currentLang.main.facts.map(fact => <Carousel.Item>{fact}</Carousel.Item>)}
               </Carousel>
             </div>
-            <button>{this.state.currentLang.main.but}</button>
+            <Link activeClass="active"  to="number" duration={300}  spy={true} ><button>{this.state.currentLang.main.but}</button></Link>
           </div>
           
         </div>
@@ -131,7 +132,7 @@ class App extends Component {
                 <MobileDocs img={sidorenko} data={this.state.currentLang.doctors.docList.sidorenko}/>
               </Carousel.Item>
             </Carousel>
-            <button id="docBut">{this.state.currentLang.doctors.docList.sidorenko.button}</button>
+            <Link activeClass="active"  to="number" duration={300}  spy={true} ><button id="docBut">{this.state.currentLang.doctors.docList.sidorenko.button}</button></Link>
           </section>  
           <section id="oper">
             <div id="upperOp">

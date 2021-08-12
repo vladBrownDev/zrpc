@@ -424,7 +424,14 @@ footer {
     display: flex;
   }
   header {
-    min-height: 11.6vh;
+    min-height: 8.6vh;
+    padding-left:5vw;
+    padding-right: 5vw;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    background: #E5E5E5;
+    z-index: 5;
   }
 
   #upperBlock {
@@ -436,7 +443,11 @@ footer {
   }
   header .navbar {
     width: 100%;
-    background-color: #000000;
+    background-color: #E5E5E5;
+    color: #000000;
+  }
+  header .navbar a {
+    color: #000000 !important;
   }
   .navbar-dark .navbar-toggler-icon {
     background-image: url("./images/burger.png") !important;
@@ -451,8 +462,8 @@ footer {
     align-items: center;
   }
   #mainUpper {
-    margin-top: 17.25vh;
     min-height: 66.7vh;
+    margin-top: 0;
   }
   #mainUpper button {
     width: 100%;
@@ -464,6 +475,7 @@ footer {
     font-size: 34px;
     line-height: 46px;
     width: 100%;
+    margin-top: 13vh;
   }
   #descr {
     width: 90vw;
