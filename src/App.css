@@ -37,6 +37,12 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 79.2vw;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  margin-top:42px;
+  left:10.41vw;
 }
 
 #headerName, #logo {
@@ -247,9 +253,9 @@ span.carousel-control-prev-icon {
 }
 
 #upperOpDesc {
-  max-width: 520px;
+  max-width: 29vw;
   font-weight: normal;
-  font-size: 17px;
+  font-size: 1vw;
   line-height: 1.5vw;
   /* letter-spacing: 0.0015em; */
 }
@@ -280,11 +286,12 @@ span.carousel-control-prev-icon {
   font-weight: normal;
   font-size: 1.3vw;
   line-height: 1.6vw;
+  margin-bottom: 10px;
   }
 .serviseDesc {
-  max-width: 320px;
+  max-width: 100%;
   font-size: 0.83vw;
-  line-height: 1.2vw;
+  line-height: 1vw;
 }
 #downOp {
   display: grid;
@@ -294,8 +301,6 @@ span.carousel-control-prev-icon {
 }
 
 .settings {
-  background-image: url("./images/settings.png");
-  background-size: cover;
   height: 7vw;
   width: 7vw;
   margin-bottom: 11px;
@@ -330,17 +335,25 @@ span.carousel-control-prev-icon {
   grid-column-gap: 1.2vw;
 }
 #readReviews {
+  width: 14.16vw;
+    height: 2.9vw;
+    background-color: #E5E5E5;
+    border: 1px solid #10BFAE;
+    margin-top: 16px;
+    border-radius: 5px;
+}
+#readReviews a {
+  text-decoration: none;
+  color: #10BFAE;
   font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 33px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+    font-weight: normal;
+    font-size: 1.04vw;
+    line-height: 27px;
+    letter-spacing: 0.0015em;
+    width: 14.16vw;
+    height: 2.9vw;
 }
-#readReviews img {
-  padding-top: 19px;
-}
+
 #map {
   margin:0;
   height: 60vh;
@@ -432,6 +445,8 @@ footer {
     top: 0px;
     background: #E5E5E5;
     z-index: 5;
+    margin-top: 0;
+    width: 100vw;
   }
 
   #upperBlock {

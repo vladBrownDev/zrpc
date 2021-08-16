@@ -18,6 +18,14 @@ import reviewImg from "./images/reviews2.png"
 import solomka from "./images/solomka.png"
 import sidorenko from "./images/sidorenko.png"
 
+ //icons
+
+import fIcon from "./images/servIcons/1.png"
+import sIcon from "./images/servIcons/2.png"
+import tIcon from "./images/servIcons/3.png"
+import fourthIcon from "./images/servIcons/4.png"
+import fifthIcon from "./images/servIcons/5.png"
+import sixthIcon from "./images/servIcons/6.png"
 
 
 let langObj = language()
@@ -55,8 +63,8 @@ class App extends Component {
       <>
       <header>
   
-  <div id="headerName"></div>
-  <div id="nav">
+        <div id="headerName"></div>
+        <div id="nav">
 
     <span id="fBut">{this.state.currentLang.header.fBut}</span>
     <span><Link activeClass="active"  to="docHead" duration={300} offset={-200} spy={true} >{this.state.currentLang.header.secBut}</Link></span>
@@ -143,7 +151,7 @@ class App extends Component {
               </div>
   
               <div class="operBlock">
-                <div class="settings"></div>
+                <img src={fIcon} alt="icon" class="settings"></img>
                 <div id="operText">
                   <h4>{this.state.currentLang.servises.serv1}</h4>
                   <div class="serviseDesc">{this.state.currentLang.servises.serv1Desk}</div>
@@ -152,7 +160,7 @@ class App extends Component {
               </div>
   
               <div class="operBlock">
-                <div class="settings"></div>
+              <img src={sIcon} alt="icon" class="settings"></img>
                 <div id="operText">
                   <h4>{this.state.currentLang.servises.serv2}</h4>
                   <div class="serviseDesc">{this.state.currentLang.servises.serv2Desk}</div>
@@ -161,7 +169,7 @@ class App extends Component {
               </div>
               <div id="downLfetBlock">
                 <div class="operBlock">
-                  <div class="settings"></div>
+                <img src={tIcon} alt="icon" class="settings"></img>
                   <div id="operText">
                     <h4>{this.state.currentLang.servises.serv3}</h4>
                     <div class="serviseDesc">{this.state.currentLang.servises.serv3Desk}</div>
@@ -170,7 +178,7 @@ class App extends Component {
                 </div>
     
                 <div class="operBlock">
-                  <div class="settings"></div>
+                <img src={sixthIcon} alt="icon" class="settings"></img>
                   <div id="operText">
                     <h4>{this.state.currentLang.servises.serv4}</h4>
                     <div class="serviseDesc">{this.state.currentLang.servises.serv4Desk}</div>
@@ -181,7 +189,7 @@ class App extends Component {
               </div>
   
               <div class="operBlock">
-                <div class="settings"></div>
+              <img src={fifthIcon} alt="icon" class="settings"></img>
                 <div id="operText">
                   <h4>{this.state.currentLang.servises.serv5}</h4>
                   <div class="serviseDesc">{this.state.currentLang.servises.serv5Desk}</div>
@@ -190,7 +198,7 @@ class App extends Component {
               </div>
   
               <div class="operBlock">
-                <div class="settings"></div>
+              <img src={fourthIcon} alt="icon" class="settings"></img>
                 <div id="operText">
                   <h4>{this.state.currentLang.servises.serv6}</h4>
                   <div class="serviseDesc">{this.state.currentLang.servises.serv6Desk}</div>
@@ -260,14 +268,13 @@ class App extends Component {
               <Review1/> <Review1/> <Review1/>
             </div>
                 
-            <div id="readReviews">
-              <div>{this.state.currentLang.reviews.read}</div>
+            <button id="readReviews">
+             
               <a  target="_blank" rel="noreferrer" href="https://www.google.com/search?q=%D0%B7%D1%80%D0%BF%D1%86&oq=%D0%B7%D1%80%D0%BF%D1%86&aqs=chrome..69i57j46i39i175i199j0i1i10j0i1l2j69i60l3.1198j0j7&sourceid=chrome&ie=UTF-8#lrd=0x40dc5ee6088d346f:0x9dbe02740ea7d681,1,,,"              >
-                <img alt="Читать все отзывы"
-                src={reviewImg}/>
+                Читать все отзывы
               </a>
               
-            </div>
+            </button>
             
           </section>
           
