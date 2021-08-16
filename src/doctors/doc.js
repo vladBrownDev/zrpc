@@ -1,5 +1,6 @@
 import React from "react"
 import "./doc1.css"
+import {Link} from 'react-scroll'
 
 const Doc = props => {
     return(
@@ -18,7 +19,7 @@ const Doc = props => {
                     
                 </div>
                 <div id="buttonShell">
-                    <button>{props.data.button}</button>
+                    <Link activeClass="active"  to="number" duration={300}  spy={true} ><button >{props.data.button}</button></Link>
                 </div>
             </div>
           

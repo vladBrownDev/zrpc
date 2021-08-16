@@ -255,8 +255,13 @@ span.carousel-control-prev-icon {
 #upperOpDesc {
   max-width: 29vw;
   font-weight: normal;
+
   font-size: 1vw;
   line-height: 1.5vw;
+
+  font-size: 17px;
+  line-height: 2.5vh;
+
   /* letter-spacing: 0.0015em; */
 }
 .operBlock {
