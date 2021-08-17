@@ -5,8 +5,8 @@ import {Link} from 'react-scroll'
 const Doc = props => {
     return(
         <div id="docCard">
-            <div id="docImage">
-            </div>
+            <img id="docImage" alt="DoctorImage" src={props.img}>
+            </img>
             <div id="docRight">
                 <div id="docDesc">
                     <h1>{props.data.name}</h1>

@@ -353,8 +353,9 @@ span.carousel-control-prev-icon {
     border: 1px solid #10BFAE;
     margin-top: 16px;
     border-radius: 5px;
+    text-decoration: none;
 }
-#readReviews a {
+#readReviews div {
   text-decoration: none;
   color: #10BFAE;
   font-style: normal;
@@ -362,8 +363,11 @@ span.carousel-control-prev-icon {
     font-size: 1.04vw;
     line-height: 27px;
     letter-spacing: 0.0015em;
-    width: 14.16vw;
-    height: 2.9vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
 }
 
 #map {
@@ -698,8 +702,8 @@ footer {
     width: 188px;
     height: 33px;
   }
-  #readReviews a {
-    font-size: 10px;
+  #readReviews div {
+    font-size: 14px;
     width: 100%;
   }
   #reviews {

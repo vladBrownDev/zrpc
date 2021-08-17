@@ -6,7 +6,6 @@
     justify-content: space-between;
 }
 #docImage {
-    background-image: url("../images/doc1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     width: 22vw;
@@ -66,7 +65,12 @@
     /* margin-top: 3vh; */
     padding: auto;
 }
-
+ul {
+    margin-top: 1vw;
+}
+#docDesc p:nth-child(2) {
+    margin-top: 1vw;
+}
 @media screen and (max-width:1280px) {
     #docDesc {
         line-height: 1.3vw;
