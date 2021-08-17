@@ -14,7 +14,6 @@ import MobileDocs from './mobile-carousel';
 
 //images
 
-import reviewImg from "./images/reviews2.png"
 import solomka from "./images/solomka.png"
 import sidorenko from "./images/sidorenko.png"
 

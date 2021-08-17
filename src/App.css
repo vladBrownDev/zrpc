@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
 /* fonts */
-
+::-webkit-scrollbar {
+  background-color: #E5E5E5;
+  width: 13px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius:5px ;
+  background-color: #10BFAE;
+}
 html {
   box-sizing: border-box;
   background: #E5E5E5;
@@ -253,7 +260,7 @@ span.carousel-control-prev-icon {
 }
 
 #upperOpDesc {
-  max-width: 29vw;
+  max-width: 32vw;
   font-weight: normal;
 
   font-size: 1vw;
@@ -682,10 +689,18 @@ footer {
     display: none;
   }
   #readReviews {
-    justify-content: space-between;
-    font-size: 6.5vw;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 188px;
+    height: 33px;
+  }
+  #readReviews a {
+    font-size: 10px;
+    width: 100%;
   }
   #reviews {
     margin-bottom: 8.45vh;
