@@ -35,10 +35,10 @@ class App extends Component {
     super(props)
     const {ukr,rus} = langObj
     this.state = {
-      currentLang : ukr
+      currentLang : ukr,
+      currentMobileNavItem : "burger"
     }
-    this.setRus = () => {
-      
+    this.setRus = () => {    
       const ruEl = document.querySelector("#ru")
       const ukrEl = document.querySelector("#ukr")
       ruEl.className = "activeLang"
@@ -54,6 +54,19 @@ class App extends Component {
     }
     this.changeColor = (e) => {
       e.target.style.backgroundColor="white"
+    }
+    this.setCross = () => {
+      const burg = document.querySelector(".navbar-toggler-icon")
+      const {currentMobileNavItem} = this.state
+      if(currentMobileNavItem === "burger") {
+        this.setState(() => {return ({currentMobileNavItem : "cross"})})
+        burg.id="navbar-toggler-icon-cross"
+      }
+      if(currentMobileNavItem === "cross") {
+        this.setState(() => {return ({currentMobileNavItem : "burger"})})
+        burg.id=""
+      }
+      
     }
   }
 
@@ -80,7 +93,7 @@ class App extends Component {
     <Navbar.Brand href="#home">
       <div id="logo"></div>
     </Navbar.Brand>
-    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+    <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={this.setCross}/>
     <Navbar.Collapse id="responsive-nav-dropdown">
       <Nav className="mr-auto">
           <Link activeClass="active"  to="docHead" duration={300}  spy={true} >{this.state.currentLang.header.secBut}</Link>

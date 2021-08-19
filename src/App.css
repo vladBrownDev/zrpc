@@ -83,6 +83,8 @@ header {
   color: #10BFAE;
 }
 
+
+
 #langSelect {
   display: flex;
   flex-direction: row;
@@ -135,10 +137,13 @@ header .navbar {
   line-height: 33px;
   color: #FFFFFF;
   width:70%;
-  max-width: 792px;
+  max-width: 41.25vw;
+  height: 10vw;
 }
 #descr .carousel .carousel-inner .carousel-item {
   height: 110px;
+  font-size: 1.3vw;
+  line-height: 1.6vw;
 }
 
 #mainUpper button {
@@ -263,11 +268,8 @@ span.carousel-control-prev-icon {
   max-width: 32vw;
   font-weight: normal;
 
-  font-size: 1vw;
-  line-height: 1.5vw;
-
-  font-size: 17px;
-  line-height: 2.5vh;
+  font-size: 1.13vw;
+  line-height: 1.35vw;
 
   /* letter-spacing: 0.0015em; */
 }
@@ -480,8 +482,10 @@ footer {
   header .navbar a {
     color: #000000 !important;
   }
-  .navbar-dark .navbar-toggler-icon {
-    background-image: url("./images/burger.png") !important;
+  header .navbar-dark .navbar-toggler-icon {
+    background-image: url("./images/burger-menu.png") ;
+    background-size: 140%;
+    transition: all ease-in-out 0.2s;
   }
   .navbar.navbar-dark .navbar-toggler {
     padding: 0;
@@ -491,6 +495,12 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  #navbar-toggler-icon-cross {
+    background-image: url("./images/cross.png") !important;
+    background-size: 70%;
+    transform: rotate(90deg);
+    transition: all ease-in-out 0.2s;
   }
   #mainUpper {
     min-height: 66.7vh;
