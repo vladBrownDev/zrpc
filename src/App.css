@@ -348,6 +348,9 @@ span.carousel-control-prev-icon {
   grid-template-rows: 24vw;
   grid-column-gap: 1.2vw;
 }
+#reviewGrid p {
+  margin-bottom: 0.7vw;
+}
 #readReviews {
   width: 14.16vw;
     height: 2.9vw;
@@ -513,7 +516,7 @@ footer {
     margin-bottom: 25vh;
   }
   #mainUpper h1 {
-    font-size: 9.3vw;
+    font-size: 5vh;
     line-height: 11vw;
     width: 100%;
     margin-top: 13vh;
@@ -535,7 +538,7 @@ footer {
 
   #descr .carousel .carousel-inner .carousel-item{
     width: 80vw;
-    font-size: 4vw;
+    font-size: 2vh;
     line-height: 4.4vw;
     font-family: Open Sans;
 font-style: normal;
@@ -656,7 +659,7 @@ letter-spacing: 0.5px;
   }
   #reviewGrid {
     grid-template-columns: 1fr;
-    grid-template-rows: 45vh 45vh 45vh;
+    grid-template-rows: 80vw 80vw 80vw;
     grid-row-gap :16px
   }
   #reviewGrid #reviewRight {
@@ -694,8 +697,8 @@ letter-spacing: 0.5px;
   }
   #reviewGrid #reviewText p {
     font-weight: normal;
-    font-size: 1.7vh;
-    line-height: 2.4vh;
+    font-size: 3vw;
+    line-height: 4.2vw;
     letter-spacing: 0.5px;
 
     color: #2F2F2F;
