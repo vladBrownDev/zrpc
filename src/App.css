@@ -79,6 +79,9 @@ header {
   margin-left: 2vw;
   cursor: pointer;
 }
+#nav span:hover {
+  color:#10BFAE;
+}
 #nav #fBut{
   color: #10BFAE;
 }
@@ -276,20 +279,22 @@ span.carousel-control-prev-icon {
 .operBlock {
   width: 19.16vw;
   height: 19.16vw;
-  background-color: white;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
   padding-left: 1.5vw;
   padding-right: 1.5vw;
   padding-bottom: 1.9vh;
   font-style: normal;
-
+  z-index: 1;
 }
 #operText {
   height: 35%;
+  
 }
+
 .operBlock div {
   font-style: normal;
   font-weight: normal;
@@ -301,11 +306,35 @@ span.carousel-control-prev-icon {
   font-size: 1.3vw;
   line-height: 1.6vw;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
   }
 .serviseDesc {
   max-width: 100%;
   font-size: 0.83vw;
   line-height: 1vw;
+  position: relative;
+  bottom: 225%;
+  width: 19.16vw;
+  height: 19.16vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1vw;
+  border-radius: 4px;
+  opacity: 1;
+  background-color: white;
+  color: white;
+  transition: all ease-in 0.2s;
+  z-index: -1;
+}
+.serviseDesc:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 3;
+}
+#secondDesc {
+  bottom: 250%;
+  
 }
 #downOp {
   display: grid;
@@ -373,6 +402,10 @@ span.carousel-control-prev-icon {
     align-items: center;
     height: 100%;
 
+}
+#readReviews div:hover {
+  background-color: #10BFAE;
+  color:white
 }
 
 #map {

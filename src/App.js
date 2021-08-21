@@ -175,7 +175,7 @@ class App extends Component {
               <img src={sIcon} alt="icon" class="settings"></img>
                 <div id="operText">
                   <h4>{this.state.currentLang.servises.serv2}</h4>
-                  <div class="serviseDesc">{this.state.currentLang.servises.serv2Desk}</div>
+                  <div id="secondDesc" class="serviseDesc">{this.state.currentLang.servises.serv2Desk}</div>
                 </div>
                 
               </div>
