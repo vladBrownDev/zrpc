@@ -283,7 +283,7 @@ class App extends Component {
             <a id="readReviews"  rel="noreferrer" target="_blank" href="https://www.google.com/search?q=%D0%B7%D1%80%D0%BF%D1%86&oq=%D0%B7%D1%80%D0%BF%D1%86&aqs=chrome..69i57j46i39i175i199j0i1i10j0i1l2j69i60l2.976j0j7&sourceid=chrome&ie=UTF-8#lrd=0x40dc5ee6088d346f:0x9dbe02740ea7d681,1,,,">
              
               <div>
-                Читать все отзывы
+                {this.state.currentLang.reviews.read}
               </div>
               
             </a>
