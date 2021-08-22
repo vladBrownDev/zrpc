@@ -163,7 +163,7 @@ class App extends Component {
               </div>
   
               <div class="operBlock">
-                <img src={fIcon} alt="icon" class="settings"></img>
+                <img src={tIcon} alt="icon" class="settings"></img>
                 <div id="operText">
                   <h4>{this.state.currentLang.servises.serv1}</h4>
                   <div class="serviseDesc">{this.state.currentLang.servises.serv1Desk}</div>
@@ -175,13 +175,13 @@ class App extends Component {
               <img src={sIcon} alt="icon" class="settings"></img>
                 <div id="operText">
                   <h4>{this.state.currentLang.servises.serv2}</h4>
-                  <div id="secondDesc" class="serviseDesc">{this.state.currentLang.servises.serv2Desk}</div>
+                  <div class="serviseDesc">{this.state.currentLang.servises.serv2Desk}</div>
                 </div>
                 
               </div>
               <div id="downLfetBlock">
                 <div class="operBlock">
-                <img src={tIcon} alt="icon" class="settings"></img>
+                <img src={fIcon} alt="icon" class="settings"></img>
                   <div id="operText">
                     <h4>{this.state.currentLang.servises.serv3}</h4>
                     <div class="serviseDesc">{this.state.currentLang.servises.serv3Desk}</div>
