@@ -311,6 +311,7 @@ span.carousel-control-prev-icon {
   }
 .serviseDesc {
   max-width: 100%;
+  text-align: center;
   font-size: 1vw;
   line-height: 1.3vw;
   position: relative;
