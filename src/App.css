@@ -272,7 +272,7 @@ span.carousel-control-prev-icon {
   font-weight: normal;
 
   font-size: 1.13vw;
-  line-height: 1.35vw;
+  line-height: 1.6vw;
 
   /* letter-spacing: 0.0015em; */
 }
@@ -311,8 +311,9 @@ span.carousel-control-prev-icon {
   }
 .serviseDesc {
   max-width: 100%;
-  font-size: 0.83vw;
-  line-height: 1vw;
+  text-align: center;
+  font-size: 1vw;
+  line-height: 1.3vw;
   position: relative;
   bottom: 225%;
   width: 19.16vw;
