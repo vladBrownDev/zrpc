@@ -333,7 +333,7 @@ class App extends Component {
                     {this.state.currentLang.footer.mail}
                   </div>
                   <div class="footerText">
-                      mail@gmail.com
+                      abd-zrpc@gmail.com
                   </div>
                 </div>
   
