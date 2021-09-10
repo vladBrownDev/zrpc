@@ -16,6 +16,7 @@ import MobileDocs from './mobile-carousel';
 
 import solomka from "./images/solomka.png"
 import sidorenko from "./images/sidorenko.png"
+import avatar1 from "./images/patient.png"
 
  //icons
 
@@ -289,16 +290,19 @@ class App extends Component {
             <div id="reviewGrid">
               <Review1 name={this.state.currentLang.patientReviews.partient1.name}
                 date={'23.08.2021'}
+                image={avatar1}
                 review1={this.state.currentLang.patientReviews.partient1.review1}
                 review2={this.state.currentLang.patientReviews.partient1.review2}
                 /> 
               <Review1 name={this.state.currentLang.patientReviews.partient2.name}
                 date={'10.06.2021'}
+                image={avatar1}
                 review1={this.state.currentLang.patientReviews.partient2.review1}
                 review2={this.state.currentLang.patientReviews.partient2.review2}
                 />  
               <Review1 name={this.state.currentLang.patientReviews.partient3.name}
                 date={'05.08.2021'}
+                image={avatar1}
                 review1={this.state.currentLang.patientReviews.partient3.review1}
                 review2={this.state.currentLang.patientReviews.partient3.review2}
                 />

@@ -23,7 +23,6 @@
     width: 5.83vw;
     height: 5.83vw;
     content: " ";
-    background-image: url("../images/patient.png");
     background-size: cover;
     margin-right: 1.2vw;
 }

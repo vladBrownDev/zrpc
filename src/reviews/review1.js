@@ -6,7 +6,7 @@ export default function Review1 (props) {
         <div id="firstReview">
             <div id="reviewRight">
                 <div id="patientCard">
-                    <div id="patientPic"></div>
+                    <img alt="avatar" src={props.image} id="patientPic"/>
                     <div id="rewNameShell">
                         <div id="patientName">
                             {props.name}
