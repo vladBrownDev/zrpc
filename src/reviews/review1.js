@@ -1,7 +1,7 @@
 import './review.css';
 import React from "react"
 
-export default function Review1 () {
+export default function Review1 (props) {
     return (
         <div id="firstReview">
             <div id="reviewRight">
@@ -9,19 +9,19 @@ export default function Review1 () {
                     <div id="patientPic"></div>
                     <div id="rewNameShell">
                         <div id="patientName">
-                            Имя Фамилия
+                            {props.name}
                         </div>
 
                         <div id="downPatient">
-                            <span>Пациент</span>
-                            <span>21.01.2021</span>
+                            <span></span>
+                            <span>{props.date}</span>
                         </div> 
                     </div>
                     
                 </div>
                 <div id="reviewText">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p>{props.review1}</p>
+                    {props.review2 && <p>{props.review2}</p>}
                 </div>
             </div>
         </div>

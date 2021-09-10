@@ -287,7 +287,21 @@ class App extends Component {
           <section id="reviews">
           
             <div id="reviewGrid">
-              <Review1/> <Review1/> <Review1/>
+              <Review1 name={this.state.currentLang.patientReviews.partient1.name}
+                date={'23.08.2021'}
+                review1={this.state.currentLang.patientReviews.partient1.review1}
+                review2={this.state.currentLang.patientReviews.partient1.review2}
+                /> 
+              <Review1 name={this.state.currentLang.patientReviews.partient2.name}
+                date={'10.06.2021'}
+                review1={this.state.currentLang.patientReviews.partient2.review1}
+                review2={this.state.currentLang.patientReviews.partient2.review2}
+                />  
+              <Review1 name={this.state.currentLang.patientReviews.partient3.name}
+                date={'05.08.2021'}
+                review1={this.state.currentLang.patientReviews.partient3.review1}
+                review2={this.state.currentLang.patientReviews.partient3.review2}
+                />
             </div>
               <motion.a  whileTap={{ scale: 0.9 }} id="readReviews"  rel="noreferrer" target="_blank" href="https://www.google.com/search?q=%D0%B7%D1%80%D0%BF%D1%86&oq=%D0%B7%D1%80%D0%BF%D1%86&aqs=chrome..69i57j46i39i175i199j0i1i10j0i1l2j69i60l2.976j0j7&sourceid=chrome&ie=UTF-8#lrd=0x40dc5ee6088d346f:0x9dbe02740ea7d681,1,,,">
                 <div>
