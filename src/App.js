@@ -26,8 +26,11 @@ import fourthIcon from "./images/servIcons/4.png"
 import fifthIcon from "./images/servIcons/5.png"
 import sixthIcon from "./images/servIcons/6.png"
 
+import { motion } from 'framer-motion'
+
 
 let langObj = language()
+
 
 class App extends Component {
 
@@ -73,39 +76,38 @@ class App extends Component {
   render () {
     return (
       <>
-      <header>
-  
+      <motion.header
+          initial={{ y: '-10vw' }}
+          animate={{ y: 0 }}
+          transition={{ ease: "backOut", duration: 0.7 }}
+        >
         <div id="headerName"></div>
-        <div id="nav">
-
-    <span id="fBut">{this.state.currentLang.header.fBut}</span>
-    <span><Link activeClass="active"  to="docHead" duration={300} offset={-200} spy={true} >{this.state.currentLang.header.secBut}</Link></span>
-    <span><Link  to="services" duration={300} offset={-100}  >{this.state.currentLang.header.thirdBut}</Link></span>
-    <span><Link  to="reviewHead" duration={300} offset={-200} spy={true}>{this.state.currentLang.header.fourthBut}</Link></span>
-    <span><Link  to="mail" duration={300} offset={-200} spy={true} >{this.state.currentLang.header.fifthBut}</Link></span>
-    <div id="langSelect">
-      <span id="ru" class="lang" onClick={this.setRus}>RU</span>
-      <span id="ukr" class="activeLang" onClick={this.setUkr}>UKR</span>
-    </div>
-
-  </div>
-  <Navbar collapseOnSelect expand="lg" bg="black" variant="dark">
-    <Navbar.Brand href="#home">
-      <div id="logo"></div>
-    </Navbar.Brand>
-    <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={this.setCross}/>
-    <Navbar.Collapse id="responsive-nav-dropdown">
-      <Nav className="mr-auto">
-          <Link activeClass="active"  to="docHead" duration={300}  spy={true} >{this.state.currentLang.header.secBut}</Link>
-          <Link activeClass="active"  to="servHead" duration={300}  spy={true} >{this.state.currentLang.header.thirdBut}</Link>
-          <Link activeClass="active"  to="reviewHead" duration={300}  spy={true} >{this.state.currentLang.header.fourthBut}</Link>
-          <Link activeClass="active"  to="number" duration={300}  spy={true} >{this.state.currentLang.header.fifthBut}</Link>
-      </Nav>
-      
-    </Navbar.Collapse>
-  </Navbar>
-
-</header>
+          <div id="nav">
+            <motion.span whileTap={{ scale: 0.9 }} id="fBut">{this.state.currentLang.header.fBut}</motion.span>
+            <motion.span whileTap={{ scale: 0.9 }}><Link activeClass="active"  to="docHead" duration={300} offset={-200} spy={true} >{this.state.currentLang.header.secBut}</Link></motion.span>
+            <motion.span whileTap={{ scale: 0.9 }}><Link  to="services" duration={300} offset={-100}  >{this.state.currentLang.header.thirdBut}</Link></motion.span>
+            <motion.span whileTap={{ scale: 0.9 }}><Link  to="reviewHead" duration={300} offset={-200} spy={true}>{this.state.currentLang.header.fourthBut}</Link></motion.span>
+            <motion.span whileTap={{ scale: 0.9 }}><Link  to="mail" duration={300} offset={-200} spy={true} >{this.state.currentLang.header.fifthBut}</Link></motion.span>
+            <div id="langSelect">
+              <motion.span whileTap={{ scale: 0.9 }} id="ru" class="lang" onClick={this.setRus}>RU</motion.span>
+              <motion.span whileTap={{ scale: 0.9 }} id="ukr" class="activeLang" onClick={this.setUkr}>UKR</motion.span>
+          </div>
+        </div>
+        <Navbar collapseOnSelect expand="lg" bg="black" variant="dark">
+          <Navbar.Brand href="#home">
+            <div id="logo"></div>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={this.setCross}/>
+          <Navbar.Collapse id="responsive-nav-dropdown">
+            <Nav className="mr-auto">
+              <motion.span whileTap={{ scale: 0.9 }}><Link activeClass="active"  to="docHead" duration={300}  spy={true} >{this.state.currentLang.header.secBut}</Link></motion.span>
+              <motion.span whileTap={{ scale: 0.9 }}><Link activeClass="active"  to="servHead" duration={300}  spy={true} >{this.state.currentLang.header.thirdBut}</Link></motion.span>
+              <motion.span whileTap={{ scale: 0.9 }}><Link activeClass="active"  to="reviewHead" duration={300}  spy={true} >{this.state.currentLang.header.fourthBut}</Link></motion.span>
+              <motion.span whileTap={{ scale: 0.9 }}><Link activeClass="active"  to="number" duration={300}  spy={true} >{this.state.currentLang.header.fifthBut}</Link></motion.span>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+      </motion.header>
         <div id="upperBlock">
   
           
@@ -117,7 +119,15 @@ class App extends Component {
                 {this.state.currentLang.main.facts.map(fact => <Carousel.Item>{fact}</Carousel.Item>)}
               </Carousel>
             </div>
-            <Link activeClass="active"  to="number" duration={300}  spy={true} ><button>{this.state.currentLang.main.but}</button></Link>
+            <Link 
+              activeClass="active" 
+              to="number" duration={300} 
+              spy={true}
+              >
+                <motion.button whileTap={{ scale: 0.9 }}>
+                  {this.state.currentLang.main.but}
+                </motion.button>
+            </Link>
           </div>
           
         </div>
@@ -152,7 +162,7 @@ class App extends Component {
                 <MobileDocs img={sidorenko} data={this.state.currentLang.doctors.docList.sidorenko}/>
               </Carousel.Item>
             </Carousel>
-            <Link activeClass="active"  to="number" duration={300}  spy={true} ><button id="docBut">{this.state.currentLang.doctors.docList.sidorenko.button}</button></Link>
+            <Link activeClass="active"  to="number" duration={300}  spy={true} ><motion.button whileTap={{ scale: 0.9 }} id="docBut">{this.state.currentLang.doctors.docList.sidorenko.button}</motion.button></Link>
           </section>  
           <section id="oper">
             <div id="upperOp">
@@ -279,15 +289,12 @@ class App extends Component {
             <div id="reviewGrid">
               <Review1/> <Review1/> <Review1/>
             </div>
+              <motion.a  whileTap={{ scale: 0.9 }} id="readReviews"  rel="noreferrer" target="_blank" href="https://www.google.com/search?q=%D0%B7%D1%80%D0%BF%D1%86&oq=%D0%B7%D1%80%D0%BF%D1%86&aqs=chrome..69i57j46i39i175i199j0i1i10j0i1l2j69i60l2.976j0j7&sourceid=chrome&ie=UTF-8#lrd=0x40dc5ee6088d346f:0x9dbe02740ea7d681,1,,,">
+                <div>
+                  {this.state.currentLang.reviews.read}
+                </div>
                 
-            <a id="readReviews"  rel="noreferrer" target="_blank" href="https://www.google.com/search?q=%D0%B7%D1%80%D0%BF%D1%86&oq=%D0%B7%D1%80%D0%BF%D1%86&aqs=chrome..69i57j46i39i175i199j0i1i10j0i1l2j69i60l2.976j0j7&sourceid=chrome&ie=UTF-8#lrd=0x40dc5ee6088d346f:0x9dbe02740ea7d681,1,,,">
-             
-              <div>
-                {this.state.currentLang.reviews.read}
-              </div>
-              
-            </a>
-            
+              </motion.a>
           </section>
           
           <section id="map">
@@ -299,9 +306,9 @@ class App extends Component {
                   <div class="footerH">
                     Телефон:
                   </div>
-                  <div id="number">
+                  <motion.div id="number" whileTap={{ scale: 0.9 }}>
                     <a href="tel:+380689586786">+380 (68) 958-67-86</a>
-                  </div>
+                  </motion.div>
                 </div>
                 
               </div>

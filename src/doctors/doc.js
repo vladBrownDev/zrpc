@@ -1,6 +1,7 @@
 import React from "react"
 import "./doc1.css"
 import {Link} from 'react-scroll'
+import { motion } from 'framer-motion'
 
 const Doc = props => {
     return(
@@ -19,7 +20,7 @@ const Doc = props => {
                     
                 </div>
                 <div id="buttonShell">
-                    <Link activeClass="active"  to="number" duration={300}  spy={true} ><button >{props.data.button}</button></Link>
+                    <Link activeClass="active"  to="number" duration={300}  spy={true} ><motion.button whileTap={{ scale: 0.9 }}>{props.data.button}</motion.button></Link>
                 </div>
             </div>
           
