@@ -27,6 +27,11 @@ import fourthIcon from "./images/servIcons/4.png"
 import fifthIcon from "./images/servIcons/5.png"
 import sixthIcon from "./images/servIcons/6.png"
 
+//reviews
+import review1 from "./images/reviews/review1.png"
+import review2 from "./images/reviews/review2.png"
+import review3 from "./images/reviews/review3.png"
+
 import { motion } from 'framer-motion'
 
 
@@ -285,17 +290,23 @@ class App extends Component {
           <section id="reviews">
           
             <div id="reviewGrid">
-              <Review1 name={this.state.currentLang.patientReviews.partient1.name}
+              <Review1 
+                image={review1}
+                name={this.state.currentLang.patientReviews.partient1.name}
                 date={'23.08.2021'}
                 review1={this.state.currentLang.patientReviews.partient1.review1}
                 review2={this.state.currentLang.patientReviews.partient1.review2}
                 /> 
-              <Review1 name={this.state.currentLang.patientReviews.partient2.name}
+              <Review1
+                image={review2} 
+                name={this.state.currentLang.patientReviews.partient2.name}
                 date={'10.06.2021'}
                 review1={this.state.currentLang.patientReviews.partient2.review1}
                 review2={this.state.currentLang.patientReviews.partient2.review2}
                 />  
-              <Review1 name={this.state.currentLang.patientReviews.partient3.name}
+              <Review1 
+                image={review3}
+                name={this.state.currentLang.patientReviews.partient3.name}
                 date={'05.08.2021'}
                 review1={this.state.currentLang.patientReviews.partient3.review1}
                 review2={this.state.currentLang.patientReviews.partient3.review2}
