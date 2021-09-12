@@ -14,6 +14,7 @@ import MobileDocs from './mobile-carousel';
 
 //images
 
+import zghurskyi from "./images/zghurskyi.png"
 import solomka from "./images/solomka.png"
 import sidorenko from "./images/sidorenko.png"
 import avatar1 from "./images/patient.png"
@@ -26,6 +27,11 @@ import tIcon from "./images/servIcons/3.png"
 import fourthIcon from "./images/servIcons/4.png"
 import fifthIcon from "./images/servIcons/5.png"
 import sixthIcon from "./images/servIcons/6.png"
+
+//reviews
+import review1 from "./images/reviews/review1.png"
+import review2 from "./images/reviews/review2.png"
+import review3 from "./images/reviews/review3.png"
 
 import { motion } from 'framer-motion'
 
@@ -110,9 +116,6 @@ class App extends Component {
         </Navbar>
       </motion.header>
         <div id="upperBlock">
-  
-          
-  
           <div id="mainUpper">
             <h1>{this.state.currentLang.main.h1}</h1>
             <div id="descr">
@@ -137,10 +140,10 @@ class App extends Component {
           <section id="carousel" name="carousel">
             <Carousel>
               <Carousel.Item>
-                 <Doc img={solomka} data={this.state.currentLang.doctors.docList.zghurskyi}/> 
+                 <Doc img={zghurskyi} data={this.state.currentLang.doctors.docList.zghurskyi}/> 
               </Carousel.Item>
               <Carousel.Item>
-                 <Doc img={solomka} data={this.state.currentLang.doctors.docList.sidorenko}/>
+                 <Doc img={sidorenko} data={this.state.currentLang.doctors.docList.sidorenko}/>
               </Carousel.Item>
               <Carousel.Item>
                  <Doc img={solomka} data={this.state.currentLang.doctors.docList.solomka}/>
@@ -151,16 +154,16 @@ class App extends Component {
           <section id="mobileCarousel">
             <Carousel interval={null}>
               <Carousel.Item>
-                <MobileDocs img={solomka} data={this.state.currentLang.doctors.docList.sidorenko}/>
+                <MobileDocs img={zghurskyi} data={this.state.currentLang.doctors.docList.zghurskyi}/>
                 
               </Carousel.Item>
 
               <Carousel.Item>
-                <MobileDocs img={solomka} data={this.state.currentLang.doctors.docList.solomka}/>
+                <MobileDocs img={sidorenko} data={this.state.currentLang.doctors.docList.sidorenko}/>
               </Carousel.Item>
 
               <Carousel.Item>
-                <MobileDocs img={sidorenko} data={this.state.currentLang.doctors.docList.sidorenko}/>
+                <MobileDocs img={solomka} data={this.state.currentLang.doctors.docList.solomka}/>
               </Carousel.Item>
             </Carousel>
             <Link activeClass="active"  to="number" duration={300}  spy={true} ><motion.button whileTap={{ scale: 0.9 }} id="docBut">{this.state.currentLang.doctors.docList.sidorenko.button}</motion.button></Link>
@@ -288,19 +291,25 @@ class App extends Component {
           <section id="reviews">
           
             <div id="reviewGrid">
-              <Review1 name={this.state.currentLang.patientReviews.partient1.name}
+              <Review1 
+                image={review1}
+                name={this.state.currentLang.patientReviews.partient1.name}
                 date={'23.08.2021'}
                 image={avatar1}
                 review1={this.state.currentLang.patientReviews.partient1.review1}
                 review2={this.state.currentLang.patientReviews.partient1.review2}
                 /> 
-              <Review1 name={this.state.currentLang.patientReviews.partient2.name}
+              <Review1
+                image={review2} 
+                name={this.state.currentLang.patientReviews.partient2.name}
                 date={'10.06.2021'}
                 image={avatar1}
                 review1={this.state.currentLang.patientReviews.partient2.review1}
                 review2={this.state.currentLang.patientReviews.partient2.review2}
                 />  
-              <Review1 name={this.state.currentLang.patientReviews.partient3.name}
+              <Review1 
+                image={review3}
+                name={this.state.currentLang.patientReviews.partient3.name}
                 date={'05.08.2021'}
                 image={avatar1}
                 review1={this.state.currentLang.patientReviews.partient3.review1}
@@ -337,7 +346,7 @@ class App extends Component {
                     {this.state.currentLang.footer.mail}
                   </div>
                   <div class="footerText">
-                      mail@gmail.com
+                      abd-zrpc@gmail.com
                   </div>
                 </div>
   
