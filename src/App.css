@@ -475,6 +475,10 @@ footer {
   display: none;
 }
 
+#root {
+  background: #E5E5E5;
+}
+
 @media (min-width:100px) and (max-width:980px) {
   #upperOpDesc {
     font-size: 13px;

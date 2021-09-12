@@ -14,6 +14,7 @@ import MobileDocs from './mobile-carousel';
 
 //images
 
+import zghurskyi from "./images/zghurskyi.png"
 import solomka from "./images/solomka.png"
 import sidorenko from "./images/sidorenko.png"
 
@@ -109,9 +110,6 @@ class App extends Component {
         </Navbar>
       </motion.header>
         <div id="upperBlock">
-  
-          
-  
           <div id="mainUpper">
             <h1>{this.state.currentLang.main.h1}</h1>
             <div id="descr">
@@ -136,10 +134,10 @@ class App extends Component {
           <section id="carousel" name="carousel">
             <Carousel>
               <Carousel.Item>
-                 <Doc img={solomka} data={this.state.currentLang.doctors.docList.zghurskyi}/> 
+                 <Doc img={zghurskyi} data={this.state.currentLang.doctors.docList.zghurskyi}/> 
               </Carousel.Item>
               <Carousel.Item>
-                 <Doc img={solomka} data={this.state.currentLang.doctors.docList.sidorenko}/>
+                 <Doc img={sidorenko} data={this.state.currentLang.doctors.docList.sidorenko}/>
               </Carousel.Item>
               <Carousel.Item>
                  <Doc img={solomka} data={this.state.currentLang.doctors.docList.solomka}/>
@@ -150,16 +148,16 @@ class App extends Component {
           <section id="mobileCarousel">
             <Carousel interval={null}>
               <Carousel.Item>
-                <MobileDocs img={solomka} data={this.state.currentLang.doctors.docList.sidorenko}/>
+                <MobileDocs img={zghurskyi} data={this.state.currentLang.doctors.docList.zghurskyi}/>
                 
               </Carousel.Item>
 
               <Carousel.Item>
-                <MobileDocs img={solomka} data={this.state.currentLang.doctors.docList.solomka}/>
+                <MobileDocs img={sidorenko} data={this.state.currentLang.doctors.docList.sidorenko}/>
               </Carousel.Item>
 
               <Carousel.Item>
-                <MobileDocs img={sidorenko} data={this.state.currentLang.doctors.docList.sidorenko}/>
+                <MobileDocs img={solomka} data={this.state.currentLang.doctors.docList.solomka}/>
               </Carousel.Item>
             </Carousel>
             <Link activeClass="active"  to="number" duration={300}  spy={true} ><motion.button whileTap={{ scale: 0.9 }} id="docBut">{this.state.currentLang.doctors.docList.sidorenko.button}</motion.button></Link>
