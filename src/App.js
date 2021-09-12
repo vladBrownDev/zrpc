@@ -196,8 +196,9 @@ class App extends Component {
               <div id="downLfetBlock">
                 <div class="operBlock">
                 <img src={fIcon} alt="icon" class="settings"></img>
-                  <div id="operText">
-                    <h4>{this.state.currentLang.servises.serv3}</h4>
+                  <div id="operBigText">
+                    <h4>{this.state.currentLang.servises.serv3}
+                    </h4>
                     <div class="serviseDesc">{this.state.currentLang.servises.serv3Desk}</div>
                   </div>
                   

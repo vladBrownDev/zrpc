@@ -290,11 +290,14 @@ span.carousel-control-prev-icon {
   font-style: normal;
   z-index: 1;
 }
-#operText {
+#operText, #operBigText {
   height: 35%;
   
 }
-
+#operBigText h4 {
+  height: 1.6vw;
+  padding-left: 15%;
+}
 .operBlock div {
   font-style: normal;
   font-weight: normal;
@@ -307,6 +310,10 @@ span.carousel-control-prev-icon {
   margin-bottom: 10px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-height: 20px;
+  margin-left: 10%;
   }
 .serviseDesc {
   max-width: 100%;
