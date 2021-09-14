@@ -151,17 +151,18 @@ header .navbar {
 
 #mainUpper button {
   width:14.16vw;
-  height: 5.18vh;
-  background-color: #10BFAE;
-  border:none;
-  color:white;
-  border-radius: 5px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 27px;
-  letter-spacing: 0.0015em;
-  font-size: 1.05vw;
+    height: 2.9vw;
+    background-color: #10BFAE;
+    border:none;
+    color:white;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.04vw;
+    line-height: 27px;
+    letter-spacing: 0.0015em;
+    /* margin-top: 3vh; */
+    padding: auto;
 }
 #mainUpper * {
   margin-bottom: 2.5vh;
