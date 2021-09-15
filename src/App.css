@@ -29,6 +29,15 @@ body {
   width: 100vw;
   overflow-x: hidden;
 }
+
+.smallScreen {
+  display: none;
+}
+
+.bigScreen {
+  display: inline-block;
+}
+
 #upperBlock {
   width: 100vw;
   height: 100vh;
@@ -271,9 +280,8 @@ span.carousel-control-prev-icon {
 #upperOpDesc {
   max-width: 32vw;
   font-weight: normal;
-
-  font-size: 1.13vw;
-  line-height: 1.6vw;
+  font-size: 1.02vw;
+  line-height: 1.45vw;
 
   /* letter-spacing: 0.0015em; */
 }
@@ -319,8 +327,8 @@ span.carousel-control-prev-icon {
 .serviseDesc {
   max-width: 100%;
   text-align: center;
-  font-size: 1vw;
-  line-height: 1.3vw;
+  font-size: 1.02vw;
+  line-height: 1.45vw;
   position: relative;
   bottom: 225%;
   width: 19.16vw;
@@ -491,6 +499,15 @@ footer {
   #upperOpDesc {
     font-size: 13px;
   }
+
+  .smallScreen {
+    display: inline-block;
+  }
+  
+  .bigScreen {
+    display: none;
+  }
+
   body {
     overflow-x: hidden;
     width: 100vw;
@@ -680,6 +697,7 @@ letter-spacing: 0.5px;
   button .buttonText {
     width: 60%;
   }
+
   #operMobile h2, #operMobile button {
     border-radius: 4px;
   }
@@ -742,12 +760,12 @@ letter-spacing: 0.5px;
   }
   #reviewGrid #reviewText p {
     font-weight: normal;
-    font-size: 3vw;
-    line-height: 4.2vw;
+    font-size: 4.5vw;
+    line-height: 6vw;
     letter-spacing: 0.5px;
-
     color: #2F2F2F;
   }
+
   #reviewGrid #rewNameShell {
     display: flex;
     flex-direction: column;

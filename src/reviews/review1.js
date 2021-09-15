@@ -20,8 +20,10 @@ export default function Review1 (props) {
                     
                 </div>
                 <div id="reviewText">
-                    <p>{props.review1}</p>
-                    {props.review2 && <p>{props.review2}</p>}
+                    <span class="bigScreen"><p>{props.review1}</p>
+                    {props.review2 && <p>{props.review2}</p>}</span>
+                    <span class="smallScreen"><p>{props.review1Small}</p>
+                    {props.review2Small && <p>{props.review2Small}</p>}</span>
                 </div>
             </div>
         </div>
