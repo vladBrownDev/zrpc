@@ -722,14 +722,15 @@ letter-spacing: 0.5px;
   }
   #reviewGrid {
     grid-template-columns: 1fr;
-    grid-template-rows: 80vw 80vw 80vw;
+    grid-template-rows: 33% 33% 33%;
     grid-row-gap :16px
   }
   #reviewGrid #reviewRight {
     width: 100%;
+
   }
   #reviewGrid #patientName {
-    font-size: 20px;
+    font-size: 4.5vw;
     line-height: 27px;
     display: flex;
     align-items: flex-end;
@@ -738,8 +739,11 @@ letter-spacing: 0.5px;
   color: #000000;
   }
   #reviewGrid #reviewRight {
-    padding:16px;
+    padding: 24px;
     padding-top: 31px;
+  }
+  #downPatient  {
+    display: none;
   }
   #reviewGrid #downPatient span {
     font-weight: normal;
@@ -779,12 +783,13 @@ letter-spacing: 0.5px;
   #readReviews {
     margin-left: auto;
     margin-right: auto;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 188px;
-    height: 33px;
+    width: 40vw;
+    height: 35px;
   }
   #readReviews div {
     font-size: 14px;
